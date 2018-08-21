@@ -140,3 +140,5 @@ localhost:10025 inet n  -       n       -       -       smtpd
         -o smtpd_error_sleep_time=0
         -o smtpd_soft_error_limit=1001
         -o smtpd_hard_error_limit=1000
+smtp-amavis unix -      -       n       -       2       lmtp
+        -o smtp_data_done_timeout=1200
