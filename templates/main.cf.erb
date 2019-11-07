@@ -770,6 +770,9 @@ smtpd_sasl_type = <%= @smtpd_sasl_type %>
 smtpd_sasl_path = <%= @smtpd_sasl_path %>
 
 <% end -%>
+<%if @smtpd_sasl_exceptions_networks -%>
+smtpd_sasl_exceptions_networks = <%= @smtpd_sasl_exceptions_networks %>
+<% end -%>
 <% if @smtp_sasl_auth -%>
 # Client auth against SMTP gateway
 smtp_sasl_auth_enable = yes
@@ -779,7 +782,7 @@ smtp_sasl_password_maps = <%= @smtp_sasl_password_maps %>
 <% if @smtp_sasl_security_options -%>
 smtp_sasl_security_options = <%= @smtp_sasl_security_options %>
 <% end -%>
-
+	
 <% end -%>
 <% if @smtp_sasl_tls or @smtp_use_tls -%>
 smtp_use_tls = yes
