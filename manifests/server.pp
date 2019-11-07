@@ -65,6 +65,7 @@ class postfix::server (
   $smtpd_sasl_auth = false,
   $smtpd_sasl_type = 'dovecot',
   $smtpd_sasl_path = 'private/auth',
+  $smtpd_sasl_exceptions_networks = false,
   $smtp_sasl_auth = false,
   $smtp_sasl_password_maps = undef,
   $smtp_sasl_security_options = undef,
